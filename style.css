@@ -255,6 +255,7 @@ body {
     display: flex;
     padding: 0;
     overflow-y: auto; /*Añade la barra de desplazamiento vertical solo cuando el contenido es mayor que el espacio disponible.*/
+    box-sizing: border-box;
 }
 
 .modal-left {
@@ -317,6 +318,8 @@ body {
 .modal-right {
     flex: 1.2;
     padding: 20px 25px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .modal-description {
