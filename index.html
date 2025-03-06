@@ -1,113 +1,400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="tarjeta">
-
-        <!-- Contenido principal de la tarjeta -->
-        <div class="contenido-tarjeta">
-            <div class="tag">Tecnología</div>
-            <div class="imagen-container">
-                <img src="img/Diseño sin título (3).png" alt="Cargador rápido" class="imagen-producto">
-
-                <div class="favorito" onclick="toggleFavorito(this)"> <!--onclick llama a la función toggleFavorito(this) cuando se hace clic en el botón.-->
-                    <i class="fa-regular fa-bookmark bookmark-icon"></i>
-                </div>
-                
-            </div>
-            <div class="info-producto">
-                <h2 class="titulo-producto">Carga rápida (Smartphones)</h2>
-                <p class="descripcion-producto">Permite recargar la batería de tu smartphone hasta un 50% en solo 30 minutos. Compatible con todos los dis...</p>
-            </div>
-            <div class="separador"></div>
-            <div class="tiempo-info">
-                <i class="far fa-clock"></i>
-                <span>Sin vencimiento</span>
-            </div>
-
-        </div>
-        
-        <!-- Footer de la tarjeta-->
-        <div class="footer-tarjeta">
-            <button class="button" id="openModalBtn">
-                <span>Acceder al beneficio</span>
-            </button>
-            <p class="proveedor">Proporcionado por Lenovo</p>
-        </div>
-
-       <!-- Modal para la info aparte del producto-->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2>Carga rápida (Smarthphones)</h2>
-                    
-                    <div class="header-right">
-                        <div class="tag-modal">Tecnología</div>
-                        <button class="close-button"><i class="fas fa-times"></i></button>
-                        
+    <div class="container">
+        <div class="row gap-3">
+            <div class="col mb-3 mb-sm-0">
+                <div class="tarjeta">
+                    <!-- Contenido principal de la tarjeta -->
+                    <div class="contenido-tarjeta">
+                        <div class="tag">Tecnología</div>
+                        <div class="imagen-container">
+                            <img src="img/Diseño sin título (3).png" alt="Cargador rápido" class="imagen-producto">
+                            <div class="favorito" onclick="toggleFavorito(this)">
+                                <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                            </div>
+                        </div>
+                        <div class="info-producto">
+                            <h2 class="titulo-producto">Carga rápida (Smartphones)</h2>
+                            <p class="descripcion-producto">Permite recargar la batería de tu smartphone hasta un 50% en
+                                solo 30 minutos. Compatible con todos los dis...</p>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="tiempo-info">
+                            <i class="far fa-clock"></i>
+                            <span>Sin vencimiento</span>
+                        </div>
+                    </div>
+                    <!-- Footer de la tarjeta-->
+                    <div class="footer-tarjeta">
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#modal1">
+                            <span>Acceder al beneficio</span>
+                        </button>
+                        <p class="proveedor">Proporcionado por Lenovo</p>
                     </div>
                 </div>
-                
-                
+            </div>
+
+            <div class="col">
+                <div class="tarjeta">
+                    <!-- Contenido principal de la tarjeta -->
+                    <div class="contenido-tarjeta">
+                        <div class="tag">Educación</div>
+                        <div class="imagen-container">
+                            <img src="img/Diseño sin título (9).png" alt="Cargador rápido" class="imagen-producto">
+                            <div class="favorito" onclick="toggleFavorito(this)">
+                                <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                            </div>
+                        </div>
+                        <div class="info-producto">
+                            <h2 class="titulo-producto">Universidad de San Andrés</h2>
+                            <p class="descripcion-producto">¡Potencia el desarrollo de tu equipo con un descuento exclusivo!  Aprovecha esta oportunidad única y...</p>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="tiempo-info">
+                            <i class="far fa-clock"></i>
+                            <span>Sin vencimiento</span>
+                        </div>
+                    </div>
+                    <!-- Footer de la tarjeta-->
+                    <div class="footer-tarjeta">
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#modal2">
+                            <span>Acceder al beneficio</span>
+                        </button>
+                        <p class="proveedor">Proporcionado por Universidad de San Andrés</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="tarjeta">
+                    <!-- Contenido principal de la tarjeta -->
+                    <div class="contenido-tarjeta">
+                        <div class="tag">Juguetería</div>
+                        <div class="imagen-container">
+                            <img src="img/Diseño sin título (5).png" alt="Cargador rápido" class="imagen-producto">
+                            <div class="favorito" onclick="toggleFavorito(this)">
+                                <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                            </div>
+                        </div>
+                        <div class="info-producto">
+                            <h2 class="titulo-producto">20 OFF en Rasti</h2>
+                            <p class="descripcion-producto">¡Aprovecha esta oferta exclusiva y disfruta de un 20% de descuentos en Rasti!  Descubre una amplia variedad...</p>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="tiempo-info">
+                            <i class="far fa-clock"></i>
+                            <span>Sin vencimiento</span>
+                        </div>
+                    </div>
+                    <!-- Footer de la tarjeta-->
+                    <div class="footer-tarjeta">
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#modal3">
+                            <span>Acceder al beneficio</span>
+                        </button>
+                        <p class="proveedor">Proporcionado por Rasti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <a class="d-inline d-md-none" data-bs-toggle="collapse" href="#card1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-color fa-solid fa-circle-user"></i>
+                    </a>
+
+                    <h5 class="modal-title" id="modal2Label">Carga rápida (Smartphones)</h5>
+                    <div class="tag-modal">Tecnología</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
+                    <!-- Columna Izquierda (Fija) -->
                     <div class="modal-left">
+                        <div class="collapse" id="card1">
+                            <div class="beneficiario-section">
+                                <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                                <div class="info-row">
+                                    <div class="info-label">Nombre completo:</div>
+                                    <div class="info-value">CARRIZO, MARIA LUISA</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">DNI:</div>
+                                    <div class="info-value">800000000</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">Vigencia:</div>
+                                    <div class="info-value">Sin Vencimiento</div>
+                                </div>
+                                
+                            </div>
+                        </div>
                         <div class="modal-image-container">
                             <img src="img/Diseño sin título (3).png" alt="Cargador rápido">
                         </div>
-                        
-                        <div class="beneficiario-section">
+                        <div class="beneficiario-section d-none d-md-block">
                             <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
-                            
                             <div class="info-row">
                                 <div class="info-label">Nombre completo:</div>
                                 <div class="info-value">CARRIZO, MARIA LUISA</div>
                             </div>
-                            
                             <div class="info-row">
                                 <div class="info-label">DNI:</div>
                                 <div class="info-value">800000000</div>
                             </div>
-                            
                             <div class="info-row">
                                 <div class="info-label">Vigencia:</div>
                                 <div class="info-value">Sin Vencimiento</div>
                             </div>
+                            
                         </div>
+                        <button type="button" class="btn-apply">Aplicar al beneficio</button>
                     </div>
                     
+                    <!-- Columna Derecha (Con scroll) -->
                     <div class="modal-right">
-                        <p class="modal-description">
-                            Permite recargar la batería del dispositivo en menos tiempo gracias a tecnologías como Quick Charge o Power Delivery, mejorando la experiencia del usuario y reduciendo la dependencia de cargadores.
-                        </p>
                         
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> Carga hasta un 50% en 30 minutos</li>
-                            <li><i class="fas fa-check"></i> Compatible con dispositivos iOS y Android</li>
-                            <li><i class="fas fa-check"></i> Incluye cable USB-C a Lightning</li>
-                            <li><i class="fas fa-check"></i> Garantía de 12 meses por defectos de fabricación</li>
-                            <li><i class="fas fa-check"></i> Tecnología de protección contra sobrecarga</li>
-                        </ul>
-                        
-                        <div class="valid-date">
-                            Válido desde: 28/02/2025
+                        <h2>Carga rápida para smartphones</h2>
+                        <div class="modal-description">
+                            <p>Permite recargar la batería de tu smartphone hasta un 50% en solo 30 minutos. Compatible con todos los dispositivos modernos.</p>
+                            <p>La tecnología de carga rápida utiliza un voltaje y amperaje más altos para aumentar la potencia de carga, lo que resulta en tiempos de carga significativamente más cortos en comparación con los cargadores estándar.</p>
+                            <h4>Características principales:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Carga hasta 50% en 30 minutos</li>
+                                <li><i class="fas fa-check"></i> Compatible con iOS y Android</li>
+                                <li><i class="fas fa-check"></i> Protección contra sobrecarga</li>
+                                <li><i class="fas fa-check"></i> Diseño compacto y portátil</li>
+                                <li><i class="fas fa-check"></i> Garantía de 1 año</li>
+                            </ul>
                         </div>
+
+                        <div class="text-center">Válido desde: 28/02/2025</div>
                     </div>
-                </div>
-                
-                <div class="modal-footer">
-                    <button class="btn-apply">Aplicar al beneficio</button>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <script src="main.js"></script>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <a class="d-inline d-md-none" data-bs-toggle="collapse" href="#card2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-color fa-solid fa-circle-user"></i>
+                    </a>
+                    <h5 class="modal-title" id="modal2Label">Universidad de San Andrés</h5>
+                    <div class="tag-modal">Educación</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Columna Izquierda (Fija) -->
+                    <div class="modal-left">
+                        <div class="collapse" id="card2">
+                            <div class="beneficiario-section">
+                                <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                                <div class="info-row">
+                                    <div class="info-label">Nombre completo:</div>
+                                    <div class="info-value">CARRIZO, MARIA LUISA</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">DNI:</div>
+                                    <div class="info-value">800000000</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">Vigencia:</div>
+                                    <div class="info-value">Sin Vencimiento</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-image-container">
+                            <img src="img/Diseño sin título (9).png" alt="Cargador rápido">
+                        </div>
+                        <div class="beneficiario-section d-none d-md-block">
+                            <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                            <div class="info-row">
+                                <div class="info-label">Nombre completo:</div>
+                                <div class="info-value">CARRIZO, MARIA LUISA</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">DNI:</div>
+                                <div class="info-value">800000000</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Vigencia:</div>
+                                <div class="info-value">Sin Vencimiento</div>
+                            </div>
+                            
+                        </div>
+                        <button type="button" class="btn-apply">Aplicar al beneficio</button>
+                    </div>
+                    
+                    <!-- Columna Derecha (Con scroll) -->
+                    <div class="modal-right">
+                        
+                        <h3>¡Potencia el desarrollo de tu equipo con un descuento exclusivo!</h3>
+                        <div class="modal-description">
+                            <p>Aprovecha esta oportunidad única y accede a los programas de posgrado y educación ejecutiva de la Universidad de San Andrés con un 15% de descuento exclusivo para clientes de Lenox HR.</p>
+                            <p>La tecnología de carga rápida utiliza un voltaje y amperaje más altos para aumentar la potencia de carga, lo que resulta en tiempos de carga significativamente más cortos en comparación con los cargadores estándar.</p>
+                            <h4>Pasos para acceder al beneficio:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Visita la página de la Universidad de San Andrés.</li>
+                                <li><i class="fas fa-check"></i> Explora las maestrías, posgrados y programas ejecutivos disponibles.</li>
+                                <li><i class="fas fa-check"></i>Contacta a los responsables de admisiones e infórmales que eres cliente de Lenox HR.</li>
+                                <li><i class="fas fa-check"></i> Recibe tu 15% de descuento sobre los aranceles al inscribirte.</li>
+                            </ul>
+                            <h4>Sobre la Universidad de San Andrés:</h4>
+                            <p>La Universidad de San Andrés es una de las instituciones más
+                                prestigiosas de Argentina, ofreciendo una amplia variedad de programas
+                                de formación ejecutiva y posgrados para el desarrollo integral de líderes.
+                                Con un enfoque académico riguroso y un fuerte compromiso con la innovación y
+                                la diversidad, se posiciona como líder en educación.</p>
+
+                            <div class="beneficiario-section">
+                            <h3><i class="fas fa-user-circle"></i> Informacion de contacto</h3>
+                            <div class="info-row">
+                                <div class="info-label"> <b>Informes y admisiones | Escuela de Negocios:</b> <br>
+                                    Lilian Barneche: atencionaesas_edn@udesa.edu.ar
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label"> <b>Informes y admisiones | Escuela de Negocios:</b> <br>
+                                    María Pía Scotto: educacioecutiva@udesa.edu.ar
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="text-center">Válido desde: 28/02/2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <a class=" d-inline d-md-none" data-bs-toggle="collapse" href="#card3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="icon-color fa-solid fa-circle-user"></i>
+                    </a>
+                    <h5 class="modal-title" id="modal3Label">20 OFF en Rasti</h5>
+                    <div class="tag-modal">Juguetería</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Columna Izquierda (Fija) -->
+                    <div class="modal-left">
+                        <div class="collapse" id="card3">
+                            <div class="beneficiario-section">
+                                <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                                <div class="info-row">
+                                    <div class="info-label">Nombre completo:</div>
+                                    <div class="info-value">CARRIZO, MARIA LUISA</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">DNI:</div>
+                                    <div class="info-value">800000000</div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-label">Vigencia:</div>
+                                    <div class="info-value">Sin Vencimiento</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-image-container">
+                            <img src="img/Diseño sin título (5).png" alt="Cargador rápido">
+                        </div>
+                        <div class="beneficiario-section d-none d-md-block">
+                            <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                            <div class="info-row">
+                                <div class="info-label">Nombre completo:</div>
+                                <div class="info-value">CARRIZO, MARIA LUISA</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">DNI:</div>
+                                <div class="info-value">800000000</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Vigencia:</div>
+                                <div class="info-value">Sin Vencimiento</div>
+                            </div>
+                            
+                        </div>
+                        <button type="button" class="btn-apply">Aplicar al beneficio</button>
+                    </div>
+                    
+                    <!-- Columna Derecha (Con scroll) -->
+                    <div class="modal-right">
+                        
+                        <div class="modal-description">
+                            <p>¡Aprovecha esta oferta exclusiva y disfruta de un 20% de descuentos en Rasti!
+                                Descubre una amplia variedad de juguetes didácticos y productos de puericultura en la tienda online.</p>
+
+                            <h4>Pasos para acceder al beneficio:</h4>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i>Ingresa a https://tienda.rasti.com.ar/</li>
+                                <li><i class="fas fa-check"></i> Selecciona los productos que más te gusten y agrégales al carrito.</li>
+                                <li><i class="fas fa-check"></i> Antes de finalizar tu compra, ingresa el cupón de descuento RASTILENOXHR en el campo correspondiente</li>
+                                <li><i class="fas fa-check"></i> ¡Listo!  Disfruta de tu descuento y tus nuevos productos.</li>
+                            </ul>
+                            <h4>Condiciones del descuento:</h4>
+                            <ul>
+                                <li>El código de descuento RASTILENOXHR es válido en toda la tienda online.</li>
+                                <li>El descuento será válido en la tienda on line https://tienda.juguetesrasti.com.ar/ con todos los medios de pago de la plataforma Mercado Pago. No acumulable con otras ofertas o promociones.</li>
+                                <li>No aplica a la categoría ROBÓTICA EDUCATIVA. El descuento se aplicará sobre el valor de los productos comprados y NO sobre el costo de envío.</li>
+                                <li>El descuento no aplica para las Experiencias Rasti que se comunican en la tienda.</li>
+                            </ul>
+
+                            <div class="beneficiario-section">
+                                <h3><i class="fas fa-user-circle"></i> Informacion de contacto</h3>
+                                <div class="info-row">
+                                    <div class="info-label"> <b>Facebook:</b>https://www.facebook.com/JuguetesRasti/?locale=es_LA</div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">Válido desde: 28/02/2025  hasta: 10/02/2026</div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+    <script>
+        function toggleFavorito(el) {
+            const icon = el.querySelector('.bookmark-icon');
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');
+        }
+    </script>
 </body>
+
 </html>
