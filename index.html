@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tarjeta">
+
+        <!-- Contenido principal de la tarjeta -->
+        <div class="contenido-tarjeta">
+            <div class="tag">Tecnología</div>
+            <div class="imagen-container">
+                <img src="img/Diseño sin título (3).png" alt="Cargador rápido" class="imagen-producto">
+
+                <div class="favorito" onclick="toggleFavorito(this)"> <!--onclick llama a la función toggleFavorito(this) cuando se hace clic en el botón.-->
+                    <i class="fa-regular fa-bookmark bookmark-icon"></i>
+                </div>
+                
+            </div>
+            <div class="info-producto">
+                <h2 class="titulo-producto">Carga rápida (Smartphones)</h2>
+                <p class="descripcion-producto">Permite recargar la batería de tu smartphone hasta un 50% en solo 30 minutos. Compatible con todos los dis...</p>
+            </div>
+            <div class="separador"></div>
+            <div class="tiempo-info">
+                <i class="far fa-clock"></i>
+                <span>Sin vencimiento</span>
+            </div>
+
+        </div>
+        
+        <!-- Footer de la tarjeta-->
+        <div class="footer-tarjeta">
+            <button class="button" id="openModalBtn">
+                <span>Acceder al beneficio</span>
+            </button>
+            <p class="proveedor">Proporcionado por Lenovo</p>
+        </div>
+
+       <!-- Modal para la info aparte del producto-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Carga rápida (Smarthphones)</h2>
+                    
+                    <div class="header-right">
+                        <div class="tag-modal">Tecnología</div>
+                        <button class="close-button"><i class="fas fa-times"></i></button>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <div class="modal-image-container">
+                            <img src="img/Diseño sin título (3).png" alt="Cargador rápido">
+                        </div>
+                        
+                        <div class="beneficiario-section">
+                            <h3><i class="fas fa-user-circle"></i> Datos del beneficiario</h3>
+                            
+                            <div class="info-row">
+                                <div class="info-label">Nombre completo:</div>
+                                <div class="info-value">CARRIZO, MARIA LUISA</div>
+                            </div>
+                            
+                            <div class="info-row">
+                                <div class="info-label">DNI:</div>
+                                <div class="info-value">800000000</div>
+                            </div>
+                            
+                            <div class="info-row">
+                                <div class="info-label">Vigencia:</div>
+                                <div class="info-value">Sin Vencimiento</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-right">
+                        <p class="modal-description">
+                            Permite recargar la batería del dispositivo en menos tiempo gracias a tecnologías como Quick Charge o Power Delivery, mejorando la experiencia del usuario y reduciendo la dependencia de cargadores.
+                        </p>
+                        
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Carga hasta un 50% en 30 minutos</li>
+                            <li><i class="fas fa-check"></i> Compatible con dispositivos iOS y Android</li>
+                            <li><i class="fas fa-check"></i> Incluye cable USB-C a Lightning</li>
+                            <li><i class="fas fa-check"></i> Garantía de 12 meses por defectos de fabricación</li>
+                            <li><i class="fas fa-check"></i> Tecnología de protección contra sobrecarga</li>
+                        </ul>
+                        
+                        <div class="valid-date">
+                            Válido desde: 28/02/2025
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn-apply">Aplicar al beneficio</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
